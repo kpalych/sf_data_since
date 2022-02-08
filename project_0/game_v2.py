@@ -6,20 +6,45 @@ import numpy as np
 
 def predict_number(number: int) -> int:
     """
-    Predict Number by Random method
+    Угадывание числа методом деления отрезка пополам
 
     Args:
-        number (int): destination number
+        number (int): Число, которое нужно угадать
 
     Returns:
-        int: tryes count
+        int: Число попыток для поиска
     """
+    
+    left_point = 0
+    right_point = 100
     
     try_coutn  = 0
     while True:
         try_coutn += 1
-        cur_number = np.random.randint(1, 101)
+        
+        cur_number = round((left_point+right_point) / 2.0)
         if cur_number == number:
+            break
+        elif cur_number > number:
+            tmp_left_point = round((cur_number+left_point) / 2.0)
+            if tmp_left_point > number:
+                right_point = tmp_left_point
+            elif tmp_left_point < number:
+                left_point = tmp_left_point
+            else:
+                left_point = tmp_left_point
+                right_point = tmp_left_point
+        else:
+            tmp_right_point = round((cur_number+right_point) / 2.0)
+            if tmp_right_point < number:
+                left_point = tmp_right_point
+            elif tmp_right_point > number:
+                right_point = tmp_right_point
+            else:
+                left_point = tmp_right_point
+                right_point = tmp_right_point
+      
+        if left_point == right_point:
             break
         
     return try_coutn
@@ -40,7 +65,7 @@ def score_game(predict_number_func, seed_num = 1) -> int:
     for i in range(0, passes.size):
         tryes_counts[i] = predict_number_func(passes[i])
     
-    return int(tryes_counts.mean())
+    return round(tryes_counts.mean())
         
 
 if __name__ == '__main__':
