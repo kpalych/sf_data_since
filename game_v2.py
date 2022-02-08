@@ -44,5 +44,5 @@ def score_game(predict_number_func, seed_num = 1) -> int:
         
 
 if __name__ == '__main__':
-    score_game(predict_number)
+    print(score_game(predict_number))
 
