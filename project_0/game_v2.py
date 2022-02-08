@@ -1,5 +1,5 @@
 """
-Game Predict Number v2
+Игра "Угадай число" v3 (оптимальный алгоритм: метод деления отрезка пополам)
 """
 
 import numpy as np
@@ -49,7 +49,8 @@ def predict_number(number: int) -> int:
         
     return try_coutn
 
-def score_game(predict_number_func, seed_num = 1) -> int:
+
+def score_game(predict_number_func, seed_num=1) -> int:
     """
     Game algorythm estimater
     Args:
@@ -59,8 +60,8 @@ def score_game(predict_number_func, seed_num = 1) -> int:
         int: Mean tryes count
     """
     np.random.seed(seed_num)
-    passes = np.random.randint(1, 101, size = (1000, ))
-    tryes_counts = np.zeros((passes.size, ))
+    passes = np.random.randint(0, 101, size = (1000, ), dtype=int)
+    tryes_counts = np.zeros((passes.size, ), dtype=int)
     
     for i in range(0, passes.size):
         tryes_counts[i] = predict_number_func(passes[i])

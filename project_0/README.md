@@ -26,6 +26,8 @@
 **Что практикуем**
 Учимся писать хороший код на python
 
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+
 ### Краткая информация о данных
 TO DO
 
