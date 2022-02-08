@@ -25,6 +25,7 @@ def predict_number(number: int) -> int:
         cur_number = round((left_point+right_point) / 2.0)
         if cur_number == number:
             break
+        
         elif cur_number > number:
             tmp_left_point = round((cur_number+left_point) / 2.0)
             if tmp_left_point > number:
@@ -34,6 +35,7 @@ def predict_number(number: int) -> int:
             else:
                 left_point = tmp_left_point
                 right_point = tmp_left_point
+                
         else:
             tmp_right_point = round((cur_number+right_point) / 2.0)
             if tmp_right_point < number:
