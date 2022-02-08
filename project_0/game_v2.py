@@ -18,9 +18,9 @@ def predict_number(number: int) -> int:
     left_point = 0
     right_point = 100
     
-    try_coutn  = 0
+    try_count  = 0
     while True:
-        try_coutn += 1
+        try_count += 1
         
         cur_number = round((left_point+right_point) / 2.0)
         if cur_number == number:
@@ -47,7 +47,7 @@ def predict_number(number: int) -> int:
         if left_point == right_point:
             break
         
-    return try_coutn
+    return try_count
 
 
 def score_game(predict_number_func, seed_num=1) -> int:
