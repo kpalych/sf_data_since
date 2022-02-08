@@ -1,8 +1,8 @@
 # My data scinece projects
-From the [Skillfactory Data Scientist cource] (https://skillfactory.ru/data-scientist)
+From the [Skillfactory Data Scientist cource](https://skillfactory.ru/data-scientist)
 
 ## Проекты
 
-* [Проект 0. Игра: Угадай число] (https://github.com/kpalych/sf_data_since/tree/main/project_0)
-* [Проект 1. ___________] (_____)
-* [Проект 2. ___________] (_____)
+* [Проект 0. Игра: Угадай число](https://github.com/kpalych/sf_data_since/tree/main/project_0)
+* [Проект 1. ___________](#)
+* [Проект 2. ___________](#)
