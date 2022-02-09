@@ -42,6 +42,7 @@ def score_game(predict_number_func, passes_count:int=1000,\
     """
     Функция оценки среднего числа попыток, 
     необходимых для "угадывания числа"
+    
     Args:
         predict_number_func (function): Функция, реализующая
                                         поиск числа
