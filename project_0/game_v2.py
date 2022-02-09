@@ -1,5 +1,5 @@
 """
-Игра "Угадай число" v3 (оптимальный алгоритм: метод деления отрезка пополам)
+Игра "Угадай число" v2 (метод деления отрезка пополам)
 """
 
 import numpy as np
@@ -15,55 +15,54 @@ def predict_number(number: int) -> int:
         int: Число попыток для поиска
     """
     
-    left_point = 0
-    right_point = 100
+    left_point = 0 # левая граница отрезка поиска
+    right_point = 100 # правая граница отрезка поиска
     
-    try_count = 0
+    try_count = 0 # число попыток угадывания числа
     while True:
         try_count += 1
         
-        cur_number = round((left_point+right_point) / 2.0)
-        if cur_number == number:
+        # середина текущего отрезка поиска
+        middle_point = round((left_point+right_point) / 2.0)
+        if middle_point == number:
             break
         
-        elif cur_number > number:
-            tmp_left_point = round((cur_number+left_point) / 2.0)
-            if tmp_left_point > number:
-                right_point = tmp_left_point
-            elif tmp_left_point < number:
-                left_point = tmp_left_point
-            else:
-                left_point = tmp_left_point
-                right_point = tmp_left_point
-                
+        elif middle_point > number:
+            # смещаем правую границу отрезка поиска на середину
+            right_point = middle_point
         else:
-            tmp_right_point = round((cur_number+right_point) / 2.0)
-            if tmp_right_point < number:
-                left_point = tmp_right_point
-            elif tmp_right_point > number:
-                right_point = tmp_right_point
-            else:
-                left_point = tmp_right_point
-                right_point = tmp_right_point
-      
-        if left_point == right_point:
-            break
-        
+            # смещаем левую границу отрезка поиска на середину
+            left_point = middle_point
+
     return try_count
 
 
-def score_game(predict_number_func, seed_num=1) -> int:
+def score_game(predict_number_func, passes_count:int=1000,\
+               seed_num:int=1) -> int:
     """
-    Game algorythm estimater
+    Функция оценки среднего числа попыток, 
+    необходимых для "угадывания числа"
     Args:
-        predict_number_func (function): etimated game function
+        predict_number_func (function): Функция, реализующая
+                                        поиск числа
+        
+        passes_count (int): Количество прогонов для оценки среднего
+                            числа попыток
+        
+        seed_num (int): Начальный seed для генератора случайных чисел
 
     Returns:
-        int: Mean tryes count
+        int: Среднее значение от числа попыток за passes_count прогонов
     """
+    
+    # инициализация генератора случайных чисел
     np.random.seed(seed_num)
-    passes = np.random.randint(0, 101, size = (1000, ), dtype=int)
-    tryes_counts = np.zeros((passes.size, ), dtype=int)
+    
+    # генерация passes_count случайно "загаданых" чисел от 0 до 100
+    passes = np.random.randint(0, 101, size=(passes_count, ), dtype=int)
+    # numpy буфер для сохранения результатов прогонов
+    # функции "угадывания" числа
+    tryes_counts = np.zeros((passes.size, ), dtype=int) 
     
     for i in range(0, passes.size):
         tryes_counts[i] = predict_number_func(passes[i])
