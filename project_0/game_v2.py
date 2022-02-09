@@ -18,7 +18,7 @@ def predict_number(number: int) -> int:
     left_point = 0
     right_point = 100
     
-    try_count  = 0
+    try_count = 0
     while True:
         try_count += 1
         
