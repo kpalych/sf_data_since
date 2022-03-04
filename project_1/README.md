@@ -1,17 +1,19 @@
 # Проект 1. Анализ вакансий из HeadHunter
 
 ## Оглавление
-[1. Описание проекта](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Описание-проекта)
-[2. Какой кейс решаем?](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Какой-кейс-решаем)
-[3. Краткая информация о данных](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Краткая-информация-о-данных)
-[4. Этапы работы над проектом](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Этапы-работы-над-проектом)
-[5. Результат](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Результат)
-[6. Выводы](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Выводы)
+[1. Описание проекта](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Описание-проекта)
+[2. Какой кейс решаем?](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Какой-кейс-решаем)
+[3. Краткая информация о данных](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Краткая-информация-о-данных)
+[4. Этапы работы над проектом](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Этапы-работы-над-проектом)
+[5. Результат](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Результат)
+[6. Выводы](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Выводы)
 
 ### Описание проекта
 Угадать загаданное компьютером число за минимальное число попыток
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+[Ссылка на архив с данными](https://disk.yandex.com/d/V8lMjAtmND2tDw)
+
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
 
 ### Какой кейс решаем?
 Нужно написать программу, которая угадывает число за минимальное число попыток. Результирующее число попыток не должно превышать 20.
@@ -28,26 +30,26 @@
 - Учимся работать с IDE;
 - Учимся работать с GitHub.
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
 
 ### Краткая информация о данных
 Для оценки эфективности алгоритма поиска генерируются случайные числа для "отгадывания", и сохраняются в numpy массиве типа int.
 Результаты каждого прогона также сохраняются в numpy массиве типа int.
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
 
 ### Этапы работы над проектом
 В качестве порвоначального "наивного" подхода был взят метод случайного поиска числа. Среднее значение числа попыток для данного подхода было равно 100.
 В дальнейшем алгоритм поиска числа был изменен на метод деления отрезка пополам. По итогам оценки эффективности алгоритма был получен результат в 6 попыток.
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
 
 ### Результат
 Замена алгоритма поиска со случайного поиска на метод поиска делением отрезка пополам дало увеличение эффективности поиска в 15 раз (со 100 попыток до 6).
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
 
 ### Выводы
 Алгоритм поиска случайным "угадыванием" самый не эффективный метод поиска, и он равноценен полному перебору всего диапазона.
 
-:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_0/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_1/README.md#Оглавление)
