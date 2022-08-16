@@ -13,14 +13,16 @@
 
 Вам поставлена задача создать такую модель.
 
-После подготовки данных и обучения мордели принять участие в соревновании на Kaggle.com ([Ссылка на соревнование](https://www.kaggle.com/competitions/sf-booking))
+После подготовки данных и обучения мордели принять участие в соревновании на Kaggle.com
+- [Ссылка на соревнование](https://www.kaggle.com/competitions/sf-booking)
+- [Ссылка на мой профиль в Kaggle.com](https://www.kaggle.com/kondratosadchenko)
 
 ### Файлы проекта
-- kagle\eda_project_3_main.ipynb - основной файл реализации проекта
-- kagle\convert_tags.ipynb - Формирование категориальных признаков на основании поля tags
-- kagle\lat_lng_restore.ipynb - Формирование словаря с координатами для записей с отсутствующими значениями lat, lng
-- kagle\text_blob_analizer.ipynb - Формирование вычисленных данных оценки сентимента (методы TextBlob, Blobber) и сохранение их в JSON кэш-файлы
-- kagle\vader_lexicon_analizer.ipynb - Формирование вычисленных данных оценки сентимента (метод SentimentIntensityAnalyzer) и сохранение их в JSON кэш-файлы
+- [kagle\eda_project_3_main.ipynb](https://github.com/kpalych/sf_data_since/tree/main/project_3/kagle/eda_project_3_main.ipynb) - основной файл реализации проекта
+- [kagle\convert_tags.ipynb](https://github.com/kpalych/sf_data_since/tree/main/project_3/kagle/convert_tags.ipynb) - Формирование категориальных признаков на основании поля tags
+- [kagle\lat_lng_restore.ipynb](https://github.com/kpalych/sf_data_since/tree/main/project_3/kagle/lat_lng_restore.ipynb) - Формирование словаря с координатами для записей с отсутствующими значениями lat, lng
+- [kagle\text_blob_analizer.ipynb](https://github.com/kpalych/sf_data_since/tree/main/project_3/kagle/text_blob_analizer.ipynb) - Формирование вычисленных данных оценки сентимента (методы TextBlob, Blobber) и сохранение их в JSON кэш-файлы
+- [kagle\vader_lexicon_analizer.ipynb](https://github.com/kpalych/sf_data_since/tree/main/project_3/kagle/vader_lexicon_analizer.ipynb) - Формирование вычисленных данных оценки сентимента (метод SentimentIntensityAnalyzer) и сохранение их в JSON кэш-файлы
 
 :arrow_up:[к оглавлению](https://github.com/kpalych/sf_data_since/tree/main/project_3/README.md#Оглавление)
 
